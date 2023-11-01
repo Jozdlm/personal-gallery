@@ -1,15 +1,13 @@
 <?php
 require_once("src/PhotoRepository.php");
+require_once("src/UploadService.php");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
-    $isImg = getimagesize($_FILES['photo']['tmp_name']);
+    $isAnImage = getimagesize($_FILES['photo']['tmp_name']);
 
-    if ($isImg && isset($_POST['title']) && isset($_POST['description'])) {
-        $uploadedFiles = 'uploaded/';
-        $imgUploaded = $uploadedFiles . $_FILES['photo']['name'];
-        move_uploaded_file($_FILES['photo']['tmp_name'], $imgUploaded);
-
-        insertNewPhoto($_POST['title'], $_POST['description'], $imgUploaded);
+    if ($isAnImage && isset($_POST['title']) && isset($_POST['description'])) {
+        $imgUrl = uploadPhoto();
+        insertNewPhoto($_POST['title'], $_POST['description'], $imgUrl);
 
         header('Location:index.php');
     }
