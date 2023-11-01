@@ -8,10 +8,10 @@ $photosPerPage = 8;
 $photosCount = 0;
 $pagesCount = 0;
 
-$currentPage = (isset($_GET['p'])) ? (int)$_GET['p'] : 1;
+$currentPage = (isset($_GET['p'])) ? (int) $_GET['p'] : 1;
 $startItems = ($currentPage > 1) ? $currentPage * $photosPerPage - $photosPerPage : 0;
 
-if(!$conn){
+if (!$conn) {
     header("Location:error.php");
 }
 
@@ -22,8 +22,6 @@ $photos = $stm->fetchAll(PDO::FETCH_ASSOC);
 
 $photosCount = count($photos);
 $pages = ceil($photosCount / $photosPerPage);
-
-print_r($photos);
 
 ?>
 
@@ -50,11 +48,13 @@ print_r($photos);
 
     <div class="fotos">
         <div class="contenedor">
-            <div class="thumb">
-                <a href="#">
-                    <img src="uploaded/1.jpg" alt="">
-                </a>
-            </div>
+            <?php foreach ($photos as $photo) { ?>
+                <div class="thumb">
+                    <a href="photo.php?id=<?php echo $photo['id'] ?>">
+                        <img src="<?php echo $photo['img_url'] ?>" alt="<?php echo $photo['title'] ?>">
+                    </a>
+                </div>
+            <?php } ?>
 
             <div class="paginacion">
                 <a href="#" class="izquierda"><i class="fa fa-long-arrow-left"></i> Pagina Anterior</a>
