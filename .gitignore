@@ -1,3 +1,8 @@
-### Assets
+# Assets
 uploaded/
+
+# Dependencies
 vendor/
+
+# Enviroment
+.env
