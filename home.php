@@ -57,8 +57,13 @@ $pages = ceil($photosCount / $photosPerPage);
             <?php } ?>
 
             <div class="paginacion">
-                <a href="#" class="izquierda"><i class="fa fa-long-arrow-left"></i> Pagina Anterior</a>
-                <a href="#" class="derecha">Pagina Siguiente <i class="fa fa-long-arrow-right"></i></a>
+                <?php if ($currentPage > 1) { ?>
+                    <a href="index.php?p=<?php echo $currentPage - 1 ?>" class="izquierda"><i class="fa fa-long-arrow-left"></i> Pagina Anterior</a>
+                <?php } ?>
+
+                <?php if ($currentPage != $pagesCount && $photosCount > $photosPerPage) { ?>
+                    <a href="index.php?p=<?php echo $currentPage + 1 ?>" class="derecha">Pagina Siguiente <i class="fa fa-long-arrow-right"></i></a>
+                <?php } ?>
             </div>
         </div>
     </div>
