@@ -1,3 +1,22 @@
+<?php
+    require_once "src/DbConnection.php";
+
+    if(!getDbConnection()){
+        header("Location:error.php");
+    }
+
+    if($_SERVER['RESQUEST_METHOD'] == 'POST' && !empty($_FILES)){
+        $isImg = getimagesize($_FILES['foto']['tmp_name']);
+
+        if($isImg) {
+            $uploadedFiles = 'uploaded/';
+            $imgUploaded = $uploadedFiles . $_FILES['foto']['name'];
+            move_uploaded_file($_FILES['foto']['tmp_name'], $imgUploaded);
+        }
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
