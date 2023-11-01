@@ -1,8 +1,6 @@
 <?php
+require_once("src/PhotoRepository.php");
 
-require_once("src/DbConnection.php");
-
-$conn = getDbConnection();
 $photos = [];
 $photosPerPage = 8;
 $photosCount = 0;
@@ -11,14 +9,7 @@ $pagesCount = 0;
 $currentPage = isset($_GET['p']) ? (int) $_GET['p'] : 1;
 $startItems = ($currentPage > 1) ? $currentPage * $photosPerPage - $photosPerPage : 0;
 
-if (!$conn) {
-    header("Location:error.php");
-}
-
-$stm = $conn->prepare("SELECT * FROM photos LIMIT $startItems, $photosPerPage");
-$stm->execute();
-
-$photos = $stm->fetchAll(PDO::FETCH_ASSOC);
+$photos = findPhotos($startItems, $photosPerPage);
 
 $photosCount = count($photos);
 $pages = ceil($photosCount / $photosPerPage);
