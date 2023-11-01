@@ -8,7 +8,7 @@ $photosPerPage = 8;
 $photosCount = 0;
 $pagesCount = 0;
 
-$currentPage = (isset($_GET['p'])) ? (int) $_GET['p'] : 1;
+$currentPage = isset($_GET['p']) ? (int) $_GET['p'] : 1;
 $startItems = ($currentPage > 1) ? $currentPage * $photosPerPage - $photosPerPage : 0;
 
 if (!$conn) {
