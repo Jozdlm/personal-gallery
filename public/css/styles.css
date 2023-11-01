@@ -65,21 +65,17 @@ header {
 	column-gap: 8px;
 }
 
-.fotos .contenedor {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
+.photos-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 24px;
 }
 
 .thumb {
-	width: 22%;
+	display: block;
 	margin-bottom: 30px;
 	outline:5px solid rgba(255,255,255,0);
-	-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,.8);
 	box-shadow: 2px 2px 3px rgba(0,0,0,.8);
-	-webkit-transition: all .3s ease;
-	-o-transition: all .3s ease;
 	transition: all .3s ease;
 }
 
@@ -150,33 +146,24 @@ footer .copyright {
 
 /* --- Paginacion --- */
 
-.paginacion {
-	width: 100%;
-	margin-bottom: 30px;
-	overflow: hidden;
+.pagination {
+	display: flex;
+	justify-content: space-between;
 }
 
-.paginacion a{
-	display: inline-block;
+.pagination-button{
+	display: flex;
+	align-items: center;
+	column-gap: 12px;
 	padding: 15px 20px;
 	border-radius: 50px;
 	border:1px solid rgba(255,255,255,.2);
-	-webkit-transition: all .3s ease;
-	-o-transition: all .3s ease;
 	transition: all .3s ease;
 }
 
-.paginacion a:hover {
+.pagination-button:hover {
 	border:1px solid #fff;
 	text-decoration: none;
-}
-
-.paginacion .izquierda .fa {
-	margin-right: 10px;
-}
-
-.paginacion .derecha .fa {
-	margin-left: 10px;
 }
 
 /* --- Formulario --- */
