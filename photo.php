@@ -1,25 +1,15 @@
 <?php
 
-require_once("src/DbConnection.php");
+require_once("src/PhotoRepository.php");
 
-$conn = getDbConnection();
 $id = isset($_GET['id']) ? (int) $_GET['id'] : false;
 $photo = [];
-
-if (!$conn) {
-    header("Location:error.php");
-}
 
 if (!$id) {
     header("Location:index.php");
 }
 
-$stm = $conn->prepare("SELECT * FROM photos WHERE id = :id");
-$stm->execute([
-    ':id' => $id
-]);
-
-$photo = $stm->fetch(PDO::FETCH_ASSOC);
+$photo = findPhotoById($id);
 
 if ($id && empty($photo)) {
     header("Location:index.php");
