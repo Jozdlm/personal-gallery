@@ -1,4 +1,5 @@
 <?php
+require_once("src/AppConfig.php");
 
 function getDbConnection(): PDO
 {
