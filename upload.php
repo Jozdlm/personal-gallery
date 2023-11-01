@@ -1,11 +1,5 @@
 <?php
-require_once "src/DbConnection.php";
-
-$conn = getDbConnection();
-
-if (!$conn) {
-    header("Location:error.php");
-}
+require_once("src/PhotoRepository.php");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
     $isImg = getimagesize($_FILES['photo']['tmp_name']);
@@ -15,12 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
         $imgUploaded = $uploadedFiles . $_FILES['photo']['name'];
         move_uploaded_file($_FILES['photo']['tmp_name'], $imgUploaded);
 
-        $stm = $conn->prepare('INSERT INTO photos (title, description, img_url) VALUES (:title, :description, :img_url)');
-        $stm->execute([
-            ':title' => $_POST['title'],
-            ':description'=> $_POST['description'],
-            ':img_url'=> $imgUploaded,
-        ]);
+        insertNewPhoto($_POST['title'], $_POST['description'], $imgUploaded);
 
         header('Location:index.php');
     }
