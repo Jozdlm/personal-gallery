@@ -1,19 +1,30 @@
 <?php
-    require_once "src/DbConnection.php";
+require_once "src/DbConnection.php";
 
-    if(!getDbConnection()){
-        header("Location:error.php");
+$conn = getDbConnection();
+
+if (!$conn) {
+    header("Location:error.php");
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
+    $isImg = getimagesize($_FILES['photo']['tmp_name']);
+
+    if ($isImg && isset($_POST['title']) && isset($_POST['description'])) {
+        $uploadedFiles = 'uploaded/';
+        $imgUploaded = $uploadedFiles . $_FILES['photo']['name'];
+        move_uploaded_file($_FILES['photo']['tmp_name'], $imgUploaded);
+
+        $stm = $conn->prepare('INSERT INTO photos (title, description, img_url) VALUES (:title, :description, :img_url)');
+        $stm->execute([
+            ':title' => $_POST['title'],
+            ':description'=> $_POST['description'],
+            ':img_url'=> $imgUploaded,
+        ]);
+
+        header('Location:index.php');
     }
-
-    if($_SERVER['RESQUEST_METHOD'] == 'POST' && !empty($_FILES)){
-        $isImg = getimagesize($_FILES['foto']['tmp_name']);
-
-        if($isImg) {
-            $uploadedFiles = 'uploaded/';
-            $imgUploaded = $uploadedFiles . $_FILES['foto']['name'];
-            move_uploaded_file($_FILES['foto']['tmp_name'], $imgUploaded);
-        }
-    }
+}
 ?>
 
 
@@ -41,13 +52,13 @@
         <form class="formulario" method="POST" enctype="multipart/form-data"
             action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
             <label for="foto">Selecciona tu foto</label>
-            <input type="file" id="foto" name="foto">
+            <input type="file" id="foto" name="photo">
 
             <label for="titulo">Titulo de la foto</label>
-            <input type="text" id="titulo" name="titulo">
+            <input type="text" id="titulo" name="title">
 
             <label for="descripcion">Descripcion</label>
-            <textarea name="descripcoin" id="descripcion" placeholder="Ingresa una descripcion"></textarea>
+            <textarea name="description" id="descripcion" placeholder="Ingresa una descripcion"></textarea>
 
             <input type="submit" class="submit" value="Subir foto">
         </form>
