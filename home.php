@@ -23,6 +23,10 @@ $photos = $stm->fetchAll(PDO::FETCH_ASSOC);
 $photosCount = count($photos);
 $pages = ceil($photosCount / $photosPerPage);
 
+if ($photosCount == 0 && $currentPage > 1) {
+    header('Location:index.php');
+}
+
 ?>
 
 
