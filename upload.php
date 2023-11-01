@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
 <body>
     <header>
         <div class="contenedor">
-            <h1 class="titulo">Foto: 1.jpg</h1>
+            <h1 class="titulo">Subir foto</h1>
         </div>
     </header>
 
@@ -60,7 +60,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
             <label for="descripcion">Descripcion</label>
             <textarea name="description" id="descripcion" placeholder="Ingresa una descripcion"></textarea>
 
-            <input type="submit" class="submit" value="Subir foto">
+            <div class="form-buttons">
+                <a href="index.php">Cancelar</a>
+                <input type="submit" class="submit" value="Subir foto">
+            </div>
         </form>
     </div>
 

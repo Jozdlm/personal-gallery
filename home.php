@@ -37,7 +37,10 @@ if ($photosCount == 0 && $currentPage > 1) {
 <body>
     <header>
         <div class="contenedor">
-            <h1 class="titulo">Mi Increíble Galería en PHP y MySQL</h1>
+            <div class="header-wrapper">
+                <h1 class="header-title">Hola, aquí están tus fotos!</h1>
+                <a href="upload.php" class="header-cta"><i class="fa fa-upload"></i>Subir Foto</a>
+            </div>
         </div>
     </header>
 

@@ -33,14 +33,14 @@ if ($id && empty($photo)) {
 <body>
     <header>
         <div class="contenedor">
-            <h1 class="titulo">
+            <h1 class="photo-title">
                 <?php if (!empty($photo['title'])) {
                     echo $photo['title'];
                 } ?>
             </h1>
         </div>
     </header>
-
+    
     <div class="contenedor">
         <div class="foto">
             <img src="<?php echo $photo['img_url'] ?>" alt="<?php echo $photo['title'] ?>">
@@ -49,7 +49,9 @@ if ($id && empty($photo)) {
                     echo $photo['description'];
                 } ?>
             </p>
-            <a href="index.php"><i class="fa fa-long-arrow-left"></i> Regresar</a>
+            <div class="photo-footer">
+                <a href="index.php" class="back-button"><i class="fa fa-long-arrow-left"></i>Regresar</a>
+            </div>
         </div>
     </div>
 

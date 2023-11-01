@@ -50,6 +50,21 @@ header {
 }
 
 /* --- FOTOS --- */
+.header-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.header-title {
+	font-size: 2rem;
+}
+
+.header-cta {
+	display: flex;
+	column-gap: 8px;
+}
+
 .fotos .contenedor {
 	display: flex;
 	flex-direction: row;
@@ -102,25 +117,26 @@ header {
 	margin-bottom: 30px;
 }
 
-.regresar {
+.photo-footer {
+	display: flex;
+	justify-content: center;
+}
+
+.back-button {
+	display: flex;
+	column-gap: 12px;
+	align-items: center;
+	max-width: max-content;
 	padding: 5px 10px;
-	margin-bottom: 30px;
-	display: inline-block;
 	border-radius: 50px;
 	font-size: 16px;
 	border:1px solid rgba(255,255,255,.2);
-	-webkit-transition: all .3s ease;
-	-o-transition: all .3s ease;
 	transition: all .3s ease;
 }
 
-.regresar:hover {
+.back-button:hover {
 	border:1px solid #fff;
 	text-decoration: none;
-}
-
-.regresar .fa {
-	margin-right: 15px;
 }
 
 /* --- Footer --- */
@@ -225,4 +241,11 @@ footer .copyright {
 
 .formulario .submit:hover {
 	border:1px solid rgba(255,255,255,1);
+}
+
+.form-buttons {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	column-gap: 24px;
 }
