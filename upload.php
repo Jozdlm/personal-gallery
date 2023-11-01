@@ -41,7 +41,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
             <label for="foto">Selecciona tu foto</label>
             <input type="file" id="image" name="photo">
 
-            <img src="" alt="" id="image-preview">
+            <div class="preview-wrapper">
+                <img src="" alt="" id="image-preview" class="image-preview">
+            </div>
 
             <label for="titulo">Titulo de la foto</label>
             <input type="text" id="titulo" name="title">
