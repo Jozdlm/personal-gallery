@@ -21,7 +21,7 @@ $stm->execute([
 
 $photo = $stm->fetch(PDO::FETCH_ASSOC);
 
-if($id && empty($photo)) {
+if ($id && empty($photo)) {
     header("Location:index.php");
 }
 
@@ -43,14 +43,22 @@ if($id && empty($photo)) {
 <body>
     <header>
         <div class="contenedor">
-            <h1 class="titulo">Foto: 1.jpg</h1>
+            <h1 class="titulo">
+                <?php if (!empty($photo['title'])) {
+                    echo $photo['title'];
+                } ?>
+            </h1>
         </div>
     </header>
 
     <div class="contenedor">
         <div class="foto">
-            <img src="uploaded/1.jpg" alt="">
-            <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, consequatur!</p>
+            <img src="<?php echo $photo['img_url'] ?>" alt="<?php echo $photo['title'] ?>">
+            <p class="texto">
+                <?php if (!empty($photo['description'])) {
+                    echo $photo['description'];
+                } ?>
+            </p>
             <a href="index.php"><i class="fa fa-long-arrow-left"></i> Regresar</a>
         </div>
     </div>
