@@ -39,7 +39,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
         <form class="formulario" method="POST" enctype="multipart/form-data"
             action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
             <label for="foto">Selecciona tu foto</label>
-            <input type="file" id="foto" name="photo">
+            <input type="file" id="image" name="photo">
+
+            <img src="" alt="" id="image-preview">
 
             <label for="titulo">Titulo de la foto</label>
             <input type="text" id="titulo" name="title">
@@ -57,6 +59,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
     <footer>
         <p class="copyright">Galeria creada por Jozuan Martínez - 2023</p>
     </footer>
+
+    <script src="public/scripts/preview-image.js"></script>
 </body>
 
 </html>
