@@ -12,15 +12,19 @@ if (!$id) {
 
 // Runs when it sends a POST request and before we get the photo details
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
-    $isAnImage = getimagesize($_FILES['photo']['tmp_name']);
 
-    if ($isAnImage && isset($_POST['title']) && isset($_POST['description'])) {
+    if(isset($_FILES['photo']) && is_uploaded_file( $_FILES['photo']['tmp_name'] ) && isset($_POST['title'])) {
         $imgUrl = uploadPhoto();
-
+    
         $newValues = ['title' => $_POST['title'], 'description' => $_POST['description'], 'imgUrl' => $imgUrl];
         updatePhoto($id, $newValues);
-
+    
         unlink($_SERVER['DOCUMENT_ROOT'] . '/' . $_POST['old_img']);
+    } else {
+        if(isset($_POST['title']) && isset($_POST['description'])) {
+            $newValues = ['title' => $_POST['title'], 'description' => $_POST['description'], 'imgUrl' => $_POST['old_img']];
+            updatePhoto($id, $newValues);
+        }
     }
 }
 
