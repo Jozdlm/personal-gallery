@@ -41,7 +41,11 @@ if ($id && empty($photo)) {
 
     <div class="contenedor">
         <form class="formulario" method="POST" enctype="multipart/form-data"
-            action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
+            action="<?php echo htmlspecialchars("photo.php?id=$id") ?>">
+
+            <input type="text" name="id" value="<?php echo $photo['id'] ?>" hidden>
+            <input type="text" name="old_img" value="<?php echo $photo['img_url'] ?>" hidden>
+
             <label for="foto">Selecciona tu foto</label>
             <input type="file" id="image" name="photo">
 
