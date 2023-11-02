@@ -21,7 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
         updatePhoto($id, $newValues);
 
         unlink($_SERVER['DOCUMENT_ROOT'] . '/' . $_POST['old_img']);
-        header('Location:index.php');
     }
 }
 
