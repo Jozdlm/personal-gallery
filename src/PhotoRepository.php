@@ -32,3 +32,17 @@ function insertNewPhoto(string $title, string $description, string $imgUrl): voi
         ':img_url' => $imgUrl,
     ]);
 }
+
+function updatePhoto(int $id, array $values): void
+{
+    if (count($values) > 0 && $values['title']) {
+        $conn = getDbConnection();
+        $stm = $conn->prepare('UPDATE photos SET title = :title, description = :description, img_url = :img_url WHERE id = :id');
+        $stm->execute([
+            ':id' => $id,
+            ':title' => $values['title'],
+            ':description' => $values['description'],
+            ':img_url' => $values['imgUrl'],
+        ]);
+    }
+}
