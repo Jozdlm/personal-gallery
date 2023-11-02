@@ -121,6 +121,7 @@ header {
 .photo-footer {
 	display: flex;
 	justify-content: center;
+	column-gap: 24px;
 }
 
 .back-button {

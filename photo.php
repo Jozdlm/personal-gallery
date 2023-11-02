@@ -51,6 +51,7 @@ if ($id && empty($photo)) {
             </p>
             <div class="photo-footer">
                 <a href="index.php" class="back-button"><i class="fa fa-long-arrow-left"></i>Regresar</a>
+                <a href="edit-photo.php?id=<?php echo $id ?>" class="back-button"><i class="fa fa-pencil-square-o"></i>Actualizar</a>
             </div>
         </div>
     </div>
