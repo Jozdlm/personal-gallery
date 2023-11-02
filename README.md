@@ -45,3 +45,6 @@ Details Page
 
 Upload Page
 ![Upload Page](public/images/upload-page.png)
+
+Update Page
+![Update Page](public/images/update-page.png)
