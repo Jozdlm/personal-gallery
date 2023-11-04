@@ -22,7 +22,7 @@ To run this project locally, follow these steps:
 
 2. **Set up a local web server**: You can use web server software like XAMPP or MAMP. Configure it to run PHP.
 
-3. **Database Setup**: Create a MySQL database and define the required table using the following SQL code:
+3. **Database Setup**: Create a MySQL database and define the required tables using the following SQL code:
 
    ```sql
    CREATE TABLE photos (
@@ -31,6 +31,15 @@ To run this project locally, follow these steps:
        description VARCHAR(255) NOT NULL,
        img_url VARCHAR(255) NOT NULL
    );
+
+   create table users (
+        id INT auto_increment PRIMARY KEY,
+        username VARCHAR(50) NOT NULL,
+        email VARCHAR(50) NOT NULL,
+        password VARCHAR(255) NOT NULL,
+
+        CONSTRAINT users_pk2 UNIQUE (email)
+    );
 4. **Environment Variables**: Rename the .env.template file to .env and update the variable values as needed.
 
 5. **Access the Project**: Open the project in your web browser.
