@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if (!isset($_SESSION["user"])) {
+    header("Location:login.php");
+}
+
 require_once("src/PhotoRepository.php");
 
 $photos = [];
