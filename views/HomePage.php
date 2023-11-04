@@ -4,7 +4,10 @@
     <div class="contenedor">
         <div class="header-wrapper">
             <h1 class="header-title">Hola, aquí están tus fotos!</h1>
-            <a href="upload.php" class="header-cta"><i class="fa fa-upload"></i>Subir Foto</a>
+            <div class="header-actions">
+                <a href="upload.php" class="header-cta"><i class="fa fa-upload"></i>Subir Foto</a>
+                <a href="logout.php" class="header-cta"><i class="fa fa-sign-out"></i>Cerrar Sesión</a>
+            </div>
         </div>
     </div>
 </header>
