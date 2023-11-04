@@ -9,9 +9,10 @@ This project was developed to enhance my PHP skills and serve as a learning exer
 
 ## Features
 
-- **Image Upload:** Users can upload images along with titles and descriptions.
-- **Image Gallery:** All uploaded images are displayed in a gallery format for easy navigation.
-- **Image Management:** Users can edit the titles and descriptions of their uploaded images.
+- **User Registration and Login**: Users can create accounts, log in, and manage their profiles.
+- **Image Upload**: Registered users can upload images along with titles and descriptions.
+- **Image Gallery**: All uploaded images are displayed in a gallery format for easy navigation.
+- **Image Management**: Users can edit the titles and descriptions of their uploaded images.
 
 ## Getting Started
 
