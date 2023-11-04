@@ -193,6 +193,8 @@ footer .copyright {
 
 .formulario input[type="text"],
 .formulario input[type="file"],
+.formulario input[type="email"],
+.formulario input[type="password"],
 .formulario textarea {
 	width: 100%;
 	margin-bottom: 30px;
@@ -200,6 +202,8 @@ footer .copyright {
 }
 
 .formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="password"],
 .formulario textarea {
 	padding: 10px;
 	background: none;
@@ -256,4 +260,27 @@ footer .copyright {
 	margin-bottom: 24px;
 	max-width: 400px;
 	width: 90%;
+}
+
+.sign_up-title {
+	text-align: center;
+}
+
+.contenedor.sign_up {
+	margin-top: 64px;
+}
+
+.sign_up-cta {
+	display: flex;
+	justify-content: center;
+}
+
+.sign_up-msg {
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px dashed white;
+	border-radius: 4px;
+	padding: 30px;
+	margin-bottom: 30px;
+	max-width: 500px;
 }
