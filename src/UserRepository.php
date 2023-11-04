@@ -2,11 +2,11 @@
 
 require_once("src/DbConnection.php");
 
-function getUserById($id)
+function getUserByEmail($email)
 {
     $conn = getDbConnection();
-    $stmt = $conn->prepare("SELECT * FROM users WHERE id = :id");
-    $stmt->execute([":id" => $id]);
+    $stmt = $conn->prepare("SELECT * FROM users WHERE email = :email");
+    $stmt->execute([":email" => $email]);
 
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
