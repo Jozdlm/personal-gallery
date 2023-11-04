@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if (!isset($_SESSION["user"])) {
+    header("Location:login.php");
+}
+
 require_once("src/PhotoRepository.php");
 
 $id = isset($_GET['id']) ? (int) $_GET['id'] : false;
