@@ -14,7 +14,7 @@ if (isset($_POST["email"]) && isset($_POST['password'])) {
         $hashedPassword = $user["password"];
 
         if (password_verify($password, $hashedPassword)) {
-            $message = "Welcome to app";
+            createClientSession($user["id"], $user["username"], $user["email"]);
         } else {
             $message = "Wrong credentials";
         }
