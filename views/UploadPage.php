@@ -29,6 +29,7 @@
     </form>
 </div>
 
-<script src="public/scripts/preview-image.js" defer></script>
-
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Footer.php') ?>
+<?php
+$scopedScript = 'public/scripts/preview-image.js';
+require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Footer.php');
+?>
