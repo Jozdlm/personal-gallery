@@ -10,7 +10,8 @@ function checkIfUserExist($userEmail)
 
 function createClientSession($id, $username, $email)
 {
-    if(!$username) return;
+    if (!$username)
+        return;
     session_start();
 
     $_SESSION["user"] = [
@@ -20,4 +21,12 @@ function createClientSession($id, $username, $email)
     ];
 
     header("Location: home.php");
+}
+
+function destroyClientSession()
+{
+    if (session_status() == PHP_SESSION_ACTIVE) {
+        session_destroy();
+        header("Location:login.php");
+    }
 }
