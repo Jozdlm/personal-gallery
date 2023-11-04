@@ -284,3 +284,26 @@ footer .copyright {
 	margin-bottom: 30px;
 	max-width: 500px;
 }
+
+.login-title {
+	text-align: center;
+}
+
+.contenedor.login {
+	margin-top: 64px;
+}
+
+.login-cta {
+	display: flex;
+	justify-content: center;
+}
+
+.login-msg {
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px dashed white;
+	border-radius: 4px;
+	padding: 30px;
+	margin-bottom: 30px;
+	max-width: 500px;
+}
