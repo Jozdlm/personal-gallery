@@ -307,3 +307,8 @@ footer .copyright {
 	margin-bottom: 30px;
 	max-width: 500px;
 }
+
+.header-actions {
+	display: flex;
+	column-gap: 24px;
+}
