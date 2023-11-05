@@ -4,7 +4,7 @@ A simple image gallery web application created using PHP, HTML, CSS, JavaScript,
 
 ## Motivation
 
-This project was developed to enhance my PHP skills and serve as a learning exercise. It's inspired by the project from the Falcon Master PHP Course.
+This project was developed to enhance my PHP skills and serve as a learning exercise. It's inspired by the project from the Falcon Master PHP course, but I added a lot of features.
 
 
 ## Features
@@ -25,14 +25,18 @@ To run this project locally, follow these steps:
 3. **Database Setup**: Create a MySQL database and define the required tables using the following SQL code:
 
    ```sql
-   CREATE TABLE photos (
-       id INT AUTO_INCREMENT PRIMARY KEY,
-       title VARCHAR(50) NOT NULL,
-       description VARCHAR(255) NOT NULL,
-       img_url VARCHAR(255) NOT NULL
-   );
+    CREATE TABLE photos (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        title VARCHAR(50) NOT NULL,
+        description VARCHAR(255) NOT NULL,
+        img_url VARCHAR(255) NOT NULL,
+        user_id INT NOT NULL,
 
-   create table users (
+        CONSTRAINT photos__users_fk
+            FOREIGN KEY (user_id) REFERENCES users (id)
+    );
+
+    CREATE TABLE users (
         id INT auto_increment PRIMARY KEY,
         username VARCHAR(50) NOT NULL,
         email VARCHAR(50) NOT NULL,
