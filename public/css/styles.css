@@ -312,3 +312,7 @@ footer .copyright {
 	display: flex;
 	column-gap: 24px;
 }
+
+.welcome-message {
+	text-align: start;
+}

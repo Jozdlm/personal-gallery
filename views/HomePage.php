@@ -3,7 +3,10 @@
 <header>
     <div class="contenedor">
         <div class="header-wrapper">
-            <h1 class="header-title">Hola, aquí están tus fotos!</h1>
+            <div class="welcome-message">
+                <h1 class="header-title">Mis fotos</h1>
+                <p class="header-body">Hola de nuevo <?php echo $_SESSION['user']['username'] ?> :)</h1>
+            </div>
             <div class="header-actions">
                 <a href="upload.php" class="header-cta"><i class="fa fa-upload"></i>Subir Foto</a>
                 <a href="logout.php" class="header-cta"><i class="fa fa-sign-out"></i>Cerrar Sesión</a>
