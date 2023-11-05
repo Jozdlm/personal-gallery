@@ -25,6 +25,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
             <?php echo $message ?>
         </p>
     <?php } ?>
+
+    <p class="text-center">
+        ¿Ya tienes cuenta?
+        <a href="login.php">Iniciar Sesión</a>
+    </p>
 </div>
 
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Footer.php') ?>

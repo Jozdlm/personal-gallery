@@ -316,3 +316,7 @@ footer .copyright {
 .welcome-message {
 	text-align: start;
 }
+
+.text-center {
+	text-align: center;
+}
