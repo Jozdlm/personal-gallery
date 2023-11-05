@@ -18,9 +18,9 @@ if (isset($_POST['username']) && isset($_POST["email"]) && isset($_POST['passwor
     ];
 
     if (createUser($user)) {
-        $message = "User Created";
+        header('Location: home.php');
     } else {
-        $message = "No user has been created";
+        $message = "There was an error trying to create the user";
     }
 }
 
