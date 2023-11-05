@@ -44,7 +44,7 @@ To run this project locally, follow these steps:
 
         CONSTRAINT users_pk2 UNIQUE (email)
     );
-    Install Dependencies: Before running the project, you need to install its dependencies. Use the following command to install them:
+    ```
 1. **Install Dependencies**: Before running the project, you need to install its dependencies. Use the following command to install them:
 
     ```bash
