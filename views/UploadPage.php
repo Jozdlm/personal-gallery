@@ -9,6 +9,8 @@
 <div class="contenedor">
     <form class="formulario" method="POST" enctype="multipart/form-data"
         action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
+        <input type="text" id="user-id" name="user_id" value="<?php echo $_SESSION['user']['id'] ?>" hidden>
+
         <label for="foto">Selecciona tu foto</label>
         <input type="file" id="image" name="photo">
 

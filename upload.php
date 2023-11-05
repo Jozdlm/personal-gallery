@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
 
     if ($isAnImage && isset($_POST['title']) && isset($_POST['description'])) {
         $imgUrl = uploadPhoto();
-        insertNewPhoto($_POST['title'], $_POST['description'], $imgUrl);
+        insertNewPhoto($_POST['title'], $_POST['description'], $imgUrl, (int)$_POST['user_id']);
 
         header('Location:index.php');
     }
