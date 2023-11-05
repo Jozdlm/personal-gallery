@@ -4,7 +4,7 @@ A simple image gallery web application created using PHP, HTML, CSS, JavaScript,
 
 ## Motivation
 
-This project was developed to enhance my PHP skills and serve as a learning exercise. It's inspired by the project from the Falcon Master PHP course, but I added a lot of features.
+This project was developed to enhance my PHP skills and serve as a learning exercise. I started inspired by the project from the Falcon Master PHP course, but I decided to add a lot of more features.
 
 
 ## Features
