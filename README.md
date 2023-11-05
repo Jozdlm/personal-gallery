@@ -20,9 +20,9 @@ To run this project locally, follow these steps:
 
 1. **Clone this repository.**
 
-2. **Set up a local web server**: You can use web server software like XAMPP or MAMP. Configure it to run PHP.
+1. **Set up a local web server**: You can use web server software like XAMPP or MAMP. Configure it to run PHP.
 
-3. **Database Setup**: Create a MySQL database and define the required tables using the following SQL code:
+1. **Database Setup**: Create a MySQL database and define the required tables using the following SQL code:
 
    ```sql
     CREATE TABLE photos (
@@ -44,9 +44,15 @@ To run this project locally, follow these steps:
 
         CONSTRAINT users_pk2 UNIQUE (email)
     );
-4. **Environment Variables**: Rename the .env.template file to .env and update the variable values as needed.
+    Install Dependencies: Before running the project, you need to install its dependencies. Use the following command to install them:
+1. **Install Dependencies**: Before running the project, you need to install its dependencies. Use the following command to install them:
 
-5. **Access the Project**: Open the project in your web browser.
+    ```bash
+    composer install
+    ```
+1. **Environment Variables**: Rename the .env.template file to .env and update the variable values as needed.
+
+1. **Access the Project**: Open the project in your web browser.
 
 
 ## Screenshoots
@@ -62,3 +68,9 @@ Upload Page
 
 Update Page
 ![Update Page](public/images/update-page.png)
+
+Login Page
+![Login Page](public/images/login-page.png)
+
+Register Page
+![Register Page](public/images/register-page.png)
