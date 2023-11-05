@@ -11,6 +11,17 @@ function findPhotos(int $start, int $end): array
     return $stm->fetchAll(PDO::FETCH_ASSOC);
 }
 
+function findPhotosByUser(int $start, int $end, int $userId): array
+{
+    $conn = getDbConnection();
+    $stm = $conn->prepare("SELECT * FROM photos WHERE user_id = :id LIMIT $start, $end");
+    $stm->execute([
+        ":id" => $userId,
+    ]);
+
+    return $stm->fetchAll(PDO::FETCH_ASSOC);
+}
+
 function findPhotoById(int $id): array
 {
     $conn = getDbConnection();

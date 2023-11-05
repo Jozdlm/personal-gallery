@@ -12,7 +12,7 @@ $pagesCount = 0;
 $currentPage = isset($_GET['p']) ? (int) $_GET['p'] : 1;
 $startItems = ($currentPage > 1) ? $currentPage * $photosPerPage - $photosPerPage : 0;
 
-$photos = findPhotos($startItems, $photosPerPage);
+$photos = findPhotosByUser($startItems, $photosPerPage, (int) $_SESSION['user']['id']);
 
 $photosCount = count($photos);
 $pages = ceil($photosCount / $photosPerPage);
