@@ -5,7 +5,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
 
 <header>
     <div class="wrapper">
-        <h1 class="titulo">Editar foto #
+        <h1 class="text-center">Editar foto #
             <?php echo $photo['id'] ?>
         </h1>
     </div>
@@ -18,30 +18,29 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
         <input type="text" name="id" value="<?php echo $photo['id'] ?>" hidden>
         <input type="text" name="old_img" value="<?php echo $photo['img_url'] ?>" hidden>
 
-        <label for="foto">Selecciona tu foto</label>
-        <input type="file" id="image" name="photo">
+        <label class="form-label" for="foto">Selecciona tu foto</label>
+        <input type="file" id="image" name="photo" class="form-field">
 
-        <label for="titulo">Imágen actual</label>
+        <label class="form-label" for="titulo">Imágen actual</label>
         <div class="preview-wrapper">
             <img src="<?php echo $photo['img_url'] ?>" alt="<?php echo $photo['title'] ?>" id="image-preview"
                 class="image-preview">
         </div>
 
-        <label for="titulo">Titulo de la foto</label>
-        <input type="text" id="titulo" name="title" value="<?php echo $photo['title'] ?>">
+        <label class="form-label" for="titulo">Titulo de la foto</label>
+        <input type="text" id="titulo" name="title" class="form-field" value="<?php echo $photo['title'] ?>">
 
-        <label for="descripcion">Descripcion</label>
-        <textarea name="description" id="descripcion"
-            placeholder="Ingresa una descripcion"><?php echo $photo['description'] ?></textarea>
+        <label class="form-label" for="descripcion">Descripcion</label>
+        <textarea name="description" id="descripcion" class="form-field"><?php echo $photo['description'] ?></textarea>
 
         <div class="form-buttons">
             <a href="index.php">Cancelar</a>
-            <input type="submit" class="submit" value="Guardar Cambios">
+            <input type="submit" class="button" value="Guardar Cambios">
         </div>
     </form>
 </div>
 
-<?php 
+<?php
 $scopedScript = 'public/scripts/preview-image.js';
-require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Footer.php') 
-?>
+require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Footer.php')
+    ?>
