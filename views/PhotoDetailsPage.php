@@ -1,11 +1,14 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php') ?>
+<?php
+$scopedStyle = "public\css\photo-details.css";
+require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
+?>
 
 <div class="wrapper">
-    <div class="foto">
-        <img src="<?php echo $photo['img_url'] ?>" alt="<?php echo $photo['title'] ?>">
+    <div class="photo">
+        <img src="<?php echo $photo['img_url'] ?>" alt="<?php echo $photo['title'] ?>" class="photo__img">
 
-        <div class="texto">
-            <h1 class="photo-title">
+        <div class="photo__body">
+            <h1 class="photo__title">
                 <?php if (!empty($photo['title'])) {
                     echo $photo['title'];
                 } ?>
@@ -17,9 +20,9 @@
             </p>
         </div>
 
-        <div class="photo-footer">
-            <a href="index.php" class="back-button"><i class="fa fa-long-arrow-left"></i>Regresar</a>
-            <a href="edit-photo.php?id=<?php echo $id ?>" class="back-button"><i
+        <div class="photo__footer">
+            <a href="index.php">Regresar</a>
+            <a href="edit-photo.php?id=<?php echo $id ?>" class="button"><i
                     class="fa fa-pencil-square-o"></i>Actualizar</a>
         </div>
     </div>

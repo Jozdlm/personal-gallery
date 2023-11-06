@@ -1,0 +1,32 @@
+/* --- Single Foto --- */
+.photo {
+    padding-top: 40px;
+    display: block;
+    width: 100%;
+    margin: auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+.photo__img {
+    border-radius: 8px;
+    width: 100%;
+    display: block;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+    margin-bottom: 30px;
+}
+
+.photo__body {
+    margin-bottom: 64px;
+}
+
+.photo__title {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.photo__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
