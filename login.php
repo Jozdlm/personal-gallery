@@ -20,6 +20,8 @@ if (isset($_POST["email"]) && isset($_POST['password'])) {
         } else {
             $message = "Wrong credentials";
         }
+    } else {
+        $message = "The email is not valid, please write correctly your email";
     }
 }
 
