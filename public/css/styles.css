@@ -46,6 +46,32 @@ a:hover {
 	float: right;
 }
 
+.form-field {
+	border: 1px solid rgba(255, 255, 255, .2);
+	border-radius: 8px;
+	margin-bottom: 30px;
+	padding: 10px;
+	width: 100%;
+	color: #fff;
+	background: none;
+	font-family: 'Slabo 27px', serif;
+}
+
+textarea {
+	min-height: 76px;
+	max-height: 150px;
+	max-width: 100%;
+	min-width: 100%;
+}
+
+textarea:focus {
+	border: 1px solid rgba(255, 255, 255, .5);
+}
+
+input[type="file"] {
+	border: 1px dashed rgba(255, 255, 255, .2);
+}
+
 /* --- Header ---*/
 
 header {
@@ -191,37 +217,6 @@ footer .copyright {
 	border: 1px solid red;
 	padding: 30px;
 	margin-bottom: 30px;
-}
-
-.formulario input[type="text"],
-.formulario input[type="file"],
-.formulario input[type="email"],
-.formulario input[type="password"],
-.formulario textarea {
-	width: 100%;
-	margin-bottom: 30px;
-	color: #fff;
-}
-
-.formulario input[type="text"],
-.formulario input[type="email"],
-.formulario input[type="password"],
-.formulario textarea {
-	padding: 10px;
-	background: none;
-	font-family: 'Slabo 27px', serif;
-	border: 1px solid rgba(255, 255, 255, .2);
-}
-
-.formulario textarea {
-	min-height: 76px;
-	max-height: 150px;
-	max-width: 100%;
-	min-width: 100%;
-}
-
-.formulario textarea:focus {
-	border: 1px solid rgba(255, 255, 255, .5);
 }
 
 .formulario .submit {

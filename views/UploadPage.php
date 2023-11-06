@@ -12,17 +12,17 @@
         <input type="text" id="user-id" name="user_id" value="<?php echo $_SESSION['user']['id'] ?>" hidden>
 
         <label for="foto">Selecciona tu foto</label>
-        <input type="file" id="image" name="photo">
+        <input type="file" id="image" name="photo" class="form-field">
 
         <div class="preview-wrapper">
             <img src="" alt="" id="image-preview" class="image-preview">
         </div>
 
         <label for="titulo">Titulo de la foto</label>
-        <input type="text" id="titulo" name="title">
+        <input type="text" id="titulo" name="title" class="form-field">
 
         <label for="descripcion">Descripcion</label>
-        <textarea name="description" id="descripcion" placeholder="Ingresa una descripcion"></textarea>
+        <textarea name="description" id="descripcion" class="form-field"></textarea>
 
         <div class="form-buttons">
             <a href="index.php">Cancelar</a>
