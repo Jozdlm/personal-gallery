@@ -1,7 +1,7 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php') ?>
 
 <header>
-    <div class="contenedor">
+    <div class="wrapper">
         <div class="header-wrapper">
             <div class="welcome-message">
                 <h1 class="header-title">Mis fotos</h1>
@@ -15,7 +15,7 @@
     </div>
 </header>
 
-<div class="contenedor">
+<div class="wrapper">
     <div class="photos-grid">
         <?php foreach ($photos as $photo) { ?>
             <div class="thumb">

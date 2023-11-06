@@ -4,14 +4,14 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
 ?>
 
 <header>
-    <div class="contenedor">
+    <div class="wrapper">
         <h1 class="titulo">Editar foto #
             <?php echo $photo['id'] ?>
         </h1>
     </div>
 </header>
 
-<div class="contenedor">
+<div class="wrapper">
     <form class="formulario" method="POST" enctype="multipart/form-data"
         action="<?php echo htmlspecialchars("photo.php?id=$id") ?>">
 

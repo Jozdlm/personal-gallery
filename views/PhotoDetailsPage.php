@@ -1,6 +1,6 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php') ?>
 
-<div class="contenedor">
+<div class="wrapper">
     <div class="foto">
         <img src="<?php echo $photo['img_url'] ?>" alt="<?php echo $photo['title'] ?>">
 

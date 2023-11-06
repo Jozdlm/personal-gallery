@@ -2,7 +2,7 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
 ?>
 
-<div class="contenedor login">
+<div class="wrapper">
     <h1 class="login-title">Login</h1>
     
     <form method="POST" class="formulario" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" autocomplete="off">

@@ -32,18 +32,10 @@ a:hover {
 	text-decoration: underline;
 }
 
-.contenedor {
+.wrapper {
 	max-width: 1000px;
 	width: 90%;
-	margin: auto;
-}
-
-.izquierda {
-	float: left;
-}
-
-.derecha {
-	float: right;
+	margin: 24px auto;
 }
 
 .form-field {
@@ -263,10 +255,6 @@ footer .copyright {
 	text-align: center;
 }
 
-.contenedor.sign_up {
-	margin-top: 64px;
-}
-
 .sign_up-cta {
 	display: flex;
 	justify-content: center;
@@ -284,10 +272,6 @@ footer .copyright {
 
 .login-title {
 	text-align: center;
-}
-
-.contenedor.login {
-	margin-top: 64px;
 }
 
 .login-cta {
