@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
 ?>
 
 <div class="wrapper">
@@ -20,11 +20,11 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
         </div>
     </form>
 
-    <?php if (trim($message) != '') { ?>
+    <?php if (trim($message) != ''): ?>
         <p class="error-message">
             <?php echo $message ?>
         </p>
-    <?php } ?>
+    <?php endif; ?>
 
     <p class="text-center">
         ¿Ya tienes cuenta?
@@ -32,4 +32,4 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
     </p>
 </div>
 
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Footer.php') ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Footer.php') ?>

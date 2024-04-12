@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="public/css/styles.css">
 
-    <?php if (isset($scopedStyle)) { ?>
+    <?php if (isset($scopedStyle)): ?>
         <link rel="stylesheet" href="<?php echo $scopedStyle ?>">
-    <?php } ?>
+    <?php endif; ?>
 </head>
 
 <body>

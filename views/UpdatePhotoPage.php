@@ -1,6 +1,6 @@
 <?php
 $scopedStyle = "public/css/edit-photo.css";
-require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
 ?>
 
 <header>
@@ -42,5 +42,5 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
 
 <?php
 $scopedScript = 'public/scripts/preview-image.js';
-require_once($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Footer.php')
-    ?>
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Footer.php');
+?>
