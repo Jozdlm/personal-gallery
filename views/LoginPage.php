@@ -12,12 +12,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
 
         <label class="form-label" for="password">Contraseña:</label>
         <input type="password" name="password" id="password" class="form-field">
-
-        <p class="text-center" style="margin-bottom:32px;">
-            ¿Olvidaste tu contraseña?
-            <a href="recover-password.php">Recuperar</a>
-        </p>
-
+        
         <div class="form__actions">
             <input type="submit" class="button" value="Iniciar Sesión">
         </div>
