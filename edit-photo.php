@@ -1,10 +1,11 @@
 <?php
-require_once("src/AuthGuard.php");
+require_once "src/Helpers/HttpParams.php";
+require_once "src/AuthGuard.php";
+require_once "src/PhotoRepository.php";
+
 isLoggedGuard();
 
-require_once("src/PhotoRepository.php");
-
-$id = isset($_GET['id']) ? (int) $_GET['id'] : false;
+$id = HttpParams::get('id');
 $photo = [];
 
 if (!$id) {
@@ -17,4 +18,4 @@ if ($id && empty($photo)) {
     header("Location:index.php");
 }
 
-require_once("views/UpdatePhotoPage.php");
+require_once ("views/UpdatePhotoPage.php");
