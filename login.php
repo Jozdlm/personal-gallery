@@ -1,9 +1,10 @@
 <?php
-require_once("src/AuthGuard.php");
-isAnonGuard();
+require_once "src/Helpers/Router.php";
+require_once "src/AuthGuard.php";
+require_once "src/UserRepository.php";
+require_once "src/AuthService.php";
 
-require_once("src/UserRepository.php");
-require_once("src/AuthService.php");
+isAnonGuard();
 
 $message = "";
 
@@ -25,4 +26,8 @@ if (isset($_POST["email"]) && isset($_POST['password'])) {
     }
 }
 
-require_once("views/LoginPage.php");
+Router::renderPage([
+    "page" => "LoginPage",
+    "layout" => "PublicLayout",
+    "data" => $message
+]);
