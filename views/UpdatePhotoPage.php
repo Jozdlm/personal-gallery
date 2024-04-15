@@ -34,7 +34,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
         <textarea name="description" id="descripcion" class="form-field"><?php echo $photo['description'] ?></textarea>
 
         <div class="form-buttons">
-            <a href="index.php">Cancelar</a>
+            <a href="photo.php?id=<?php echo $id ?>">Cancelar</a>
             <input type="submit" class="button" value="Guardar Cambios">
         </div>
     </form>
