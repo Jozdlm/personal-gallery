@@ -1,8 +1,3 @@
-<?php
-$scopedStyle = "public\css\photo-details.css";
-require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
-?>
-
 <div class="wrapper">
     <div class="photo">
         <img src="<?php echo $photo['img_url'] ?>" alt="<?php echo $photo['title'] ?>" class="photo__img">
@@ -29,5 +24,3 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
         </div>
     </div>
 </div>
-
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Footer.php') ?>

@@ -1,4 +1,5 @@
 <?php
+require_once "src/Helpers/Router.php";
 require_once "src/Helpers/HttpParams.php";
 require_once "src/AuthGuard.php";
 require_once "src/PhotoRepository.php";
@@ -41,4 +42,12 @@ if ($id && empty($photo)) {
     header("Location:index.php");
 }
 
-require_once ("views/PhotoDetailsPage.php");
+Router::renderPage([
+    "page" => "PhotoDetailsPage",
+    "layout" => "AppLayout",
+    "customStyle" => "photo-details",
+    "data" => [
+        "id" => $id,
+        "photo" => $photo
+    ]
+]);
