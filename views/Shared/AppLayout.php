@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="public/css/styles.css">
 
     <!-- Custom Style Files -->
-    <?php if (isset($scopedStyle)): ?>
+    <?php if (isset($scopedStyle) && trim($scopedStyle) != ''): ?>
         <link rel="stylesheet" href="public\css\<?php echo $scopedStyle ?>.css">
     <?php endif; ?>
 </head>
@@ -31,8 +31,8 @@
     </footer>
 
     <!-- Scoped script file for the page -->
-    <?php if (isset($scopedScript)): ?>
-        <script src="'public/scripts/<?php echo $scopedScript ?>.js"></script>
+    <?php if (isset($scopedScript) && trim($scopedScript) != ''): ?>
+        <script src="public/scripts/<?php echo $scopedScript ?>.js"></script>
     <?php endif; ?>
 </body>
 
