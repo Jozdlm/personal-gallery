@@ -104,6 +104,10 @@ input[type="file"] {
     text-decoration: none;
 }
 
+.button.button-outlined {
+	background-color: transparent;
+}
+
 /* --- Footer --- */
 
 footer .copyright {
