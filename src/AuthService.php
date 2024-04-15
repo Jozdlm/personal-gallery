@@ -1,14 +1,13 @@
 <?php
+require_once "src/UserRepository.php";
 
-require_once("src/UserRepository.php");
-
-function checkIfUserExist($userEmail)
+function checkIfUserExist($userEmail): bool
 {
     $user = getUserByEmail($userEmail);
     return ($user) ? true : false;
 }
 
-function createClientSession($id, $username, $email)
+function createClientSession($id, $username, $email): void
 {
     if (!$username)
         return;
@@ -23,7 +22,12 @@ function createClientSession($id, $username, $email)
     header("Location: home.php");
 }
 
-function destroyClientSession()
+function getClientSession(): array|null
+{
+    return $_SESSION["user"] ?? null;
+}
+
+function destroyClientSession(): void
 {
     if (session_status() == PHP_SESSION_ACTIVE) {
         session_destroy();
