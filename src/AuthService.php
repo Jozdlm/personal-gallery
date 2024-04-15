@@ -27,6 +27,11 @@ function getClientSession(): array|null
     return $_SESSION["user"] ?? null;
 }
 
+function updateClientSession(string $key, string $value): void
+{
+    $_SESSION["user"][$key] = $value;
+}
+
 function destroyClientSession(): void
 {
     if (session_status() == PHP_SESSION_ACTIVE) {
