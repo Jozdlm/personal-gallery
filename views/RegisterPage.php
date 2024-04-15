@@ -1,7 +1,3 @@
-<?php
-require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
-?>
-
 <div class="wrapper">
     <h1 class="text-center">Registrarse</h1>
     <form method="POST" class="formulario" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>"
@@ -20,9 +16,9 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
         </div>
     </form>
 
-    <?php if (trim($message) != ''): ?>
+    <?php if (trim($data) != ''): ?>
         <p class="error-message">
-            <?php echo $message ?>
+            <?php echo $data ?>
         </p>
     <?php endif; ?>
 
@@ -31,5 +27,3 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
         <a href="login.php">Iniciar Sesión</a>
     </p>
 </div>
-
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Footer.php') ?>
