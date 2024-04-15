@@ -1,7 +1,3 @@
-<?php
-require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
-?>
-
 <div class="wrapper">
     <h1 class="text-center">Login</h1>
 
@@ -12,15 +8,15 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
 
         <label class="form-label" for="password">Contraseña:</label>
         <input type="password" name="password" id="password" class="form-field">
-        
+
         <div class="form__actions">
             <input type="submit" class="button" value="Iniciar Sesión">
         </div>
     </form>
 
-    <?php if (trim($message) != ''): ?>
+    <?php if (isset($data) && trim($data) != ''): ?>
         <p class="error-message">
-            <?php echo $message ?>
+            <?php echo $data ?>
         </p>
     <?php endif; ?>
 
@@ -29,5 +25,3 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
         <a href="register.php">Crear cuenta</a>
     </p>
 </div>
-
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Footer.php') ?>
