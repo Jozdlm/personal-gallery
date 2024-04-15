@@ -70,3 +70,11 @@
 	text-decoration: none;
 }
 
+.empty-photo-msg {
+	padding-top: 12rem;
+	padding-bottom: 12rem;
+}
+
+.empty-photo-msg > p {
+	margin-bottom: 8px;
+}

@@ -1,8 +1,3 @@
-<?php
-$scopedStyle = "public\css\home.css";
-require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
-?>
-
 <header>
     <div class="wrapper">
         <div class="header">
@@ -19,15 +14,22 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
 </header>
 
 <div class="wrapper">
-    <div class="photos-grid">
-        <?php foreach ($photos as $photo): ?>
-            <div class="thumb">
-                <a href="photo.php?id=<?php echo $photo['id'] ?>">
-                    <img src="<?php echo $photo['img_url'] ?>" alt="<?php echo $photo['title'] ?>">
-                </a>
-            </div>
-        <?php endforeach; ?>
-    </div>
+    <?php if (count($photos) > 0): ?>
+        <div class="photos-grid">
+            <?php foreach ($photos as $photo): ?>
+                <div class="thumb">
+                    <a href="photo.php?id=<?php echo $photo['id'] ?>">
+                        <img src="<?php echo $photo['img_url'] ?>" alt="<?php echo $photo['title'] ?>">
+                    </a>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    <?php else: ?>
+        <div class="text-center empty-photo-msg">
+            <p>Parece que no has subido ninguna fotografía aún, prueba subir tu primer foto.</p>
+            <a href="upload.php">Subir foto</a>
+        </div>
+    <?php endif; ?>
 
     <div class="pagination">
         <?php if ($currentPage > 1): ?>
@@ -41,5 +43,3 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
         <?php endif; ?>
     </div>
 </div>
-
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Footer.php') ?>
