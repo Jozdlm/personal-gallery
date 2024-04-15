@@ -1,4 +1,5 @@
 <?php
+require_once "src/Helpers/Router.php";
 require_once "src/Helpers/HttpParams.php";
 require_once "src/AuthGuard.php";
 require_once "src/PhotoRepository.php";
@@ -18,4 +19,9 @@ if ($id && empty($photo)) {
     header("Location:index.php");
 }
 
-require_once ("views/UpdatePhotoPage.php");
+Router::renderPage([
+    "page" => "UpdatePhotoPage",
+    "layout" => "AppLayout",
+    "customeStyle" => "edit-photo",
+    "scopedScript" => "preview-image"
+]);

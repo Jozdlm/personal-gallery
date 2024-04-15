@@ -1,8 +1,3 @@
-<?php
-$scopedStyle = "public/css/edit-photo.css";
-require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
-?>
-
 <header>
     <div class="wrapper">
         <h1 class="text-center">Editar foto #
@@ -39,8 +34,3 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Head.php');
         </div>
     </form>
 </div>
-
-<?php
-$scopedScript = 'public/scripts/preview-image.js';
-require_once ($_SERVER['DOCUMENT_ROOT'] . '/views/Shared/Footer.php');
-?>
