@@ -1,18 +1,4 @@
-<header>
-    <div class="wrapper">
-        <div class="header">
-            <div class="header__message">
-                <h1>Mis fotos</h1>
-                <p>Hola de nuevo <?php echo $_SESSION['user']['username'] ?> :)</h1>
-            </div>
-            <div class="header-actions">
-                <a href="upload.php" class="header__button"><i class="fa fa-upload"></i>Subir Foto</a>
-                <a href="account.php" class="header__button"><i class="fa fa-user"></i>Mi Perfil</a>
-                <a href="logout.php" class="header__button"><i class="fa fa-sign-out"></i>Cerrar Sesión</a>
-            </div>
-        </div>
-    </div>
-</header>
+<?php require_once $componentsFolder . "/TopbarComponent.php"; ?>
 
 <div class="wrapper">
     <?php if (count($photos) > 0): ?>
