@@ -1,6 +1,5 @@
 <?php
-
-require_once("src/DbConnection.php");
+require_once "src/DbConnection.php";
 
 function findPhotos(int $start, int $end): array
 {
@@ -55,6 +54,17 @@ function updatePhoto(int $id, array $values): void
             ':title' => $values['title'],
             ':description' => $values['description'],
             ':img_url' => $values['imgUrl'],
+        ]);
+    }
+}
+
+function deletePhoto(int $id): void
+{
+    if ($id > 0) {
+        $conn = getDbConnection();
+        $stm = $conn->prepare('DELETE FROM photos WHERE id = :id');
+        $stm->execute([
+            ':id' => $id,
         ]);
     }
 }

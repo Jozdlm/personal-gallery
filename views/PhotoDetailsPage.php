@@ -17,6 +17,7 @@
 
         <div class="photo__footer">
             <a href="index.php">Regresar</a>
+            <a href="delete-photo.php?id=<?php echo $id ?>" class="button button-outlined">Eliminar</a>
             <a href="edit-photo.php?id=<?php echo $id ?>" class="button">
                 <i class="fa fa-pencil-square-o"></i>
                 Actualizar
