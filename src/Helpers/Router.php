@@ -6,10 +6,14 @@ final class Router
     {
         $scopedStyle = $options['customStyle'] ?? '';
         $scopedScript = $options['scopedScript'] ?? '';
-        $data = $options['data'] ?? [];
+        $data = $options['data'] ?? '';
 
         if (!isset($options['page'])) {
             throw new Exception("The page variable it's a must to render a page");
+        }
+
+        if (is_array($data)) {
+            extract($data);
         }
 
         $page = $options['page'];
