@@ -7,6 +7,7 @@
             </div>
             <div class="header-actions">
                 <a href="upload.php" class="header__button"><i class="fa fa-upload"></i>Subir Foto</a>
+                <a href="account.php" class="header__button"><i class="fa fa-user"></i>Mi Perfil</a>
                 <a href="logout.php" class="header__button"><i class="fa fa-sign-out"></i>Cerrar Sesión</a>
             </div>
         </div>
