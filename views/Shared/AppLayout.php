@@ -23,6 +23,8 @@
 </head>
 
 <body>
+    <?php require_once $componentsFolder . "/TopbarComponent.php"; ?>
+
     <?php
     require_once $_SERVER['DOCUMENT_ROOT'] . "/views/$page.php";
     ?>

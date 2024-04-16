@@ -1,5 +1,3 @@
-<?php require_once $componentsFolder . "/TopbarComponent.php"; ?>
-
 <div class="wrapper">
     <?php if (count($photos) > 0): ?>
         <div class="photos-grid">

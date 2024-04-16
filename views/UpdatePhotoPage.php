@@ -1,10 +1,10 @@
-<header>
+<div>
     <div class="wrapper">
         <h1 class="text-center">Editar foto #
             <?php echo $photo['id'] ?>
         </h1>
     </div>
-</header>
+</div>
 
 <div class="wrapper">
     <form class="formulario" method="POST" enctype="multipart/form-data"

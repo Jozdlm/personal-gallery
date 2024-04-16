@@ -1,5 +1,3 @@
-<?php require_once $componentsFolder . "/TopbarComponent.php"; ?>
-
 <div class="wrapper">
     <h1 class="text-center">Mi Perfil</h1>
     <form method="POST" class="formulario" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>"
