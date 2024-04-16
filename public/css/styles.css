@@ -7,7 +7,7 @@
 }
 
 body {
-	font-size: 16px;
+	font-size: 14px;
 	font-family: 'Inter', sans-serif;
 	background: #181d27;
 	color: #fff;
@@ -24,7 +24,19 @@ h6 {
 }
 
 h1 {
+	font-size: 32px;
+}
+
+h2 {
 	font-size: 28px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 20px;
 }
 
 a {
@@ -113,7 +125,6 @@ input[type="file"] {
 footer .copyright {
 	text-align: center;
 	color: rgba(255, 255, 255, .5);
-	font-size: 16px;
 	padding: 15px 0;
 }
 
