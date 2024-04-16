@@ -2,10 +2,10 @@
     <div class="wrapper">
         <div class="header">
             <div class="header__message">
-                <h2>
+                <h4>
                     <a href="index.php">Mis fotos</a>
-                </h2>
-                <p>Hola de nuevo <?php echo $_SESSION['user']['username'] ?> :)</p>
+                </h4>
+                <p>Hola de nuevo <?php echo $_SESSION['user']['username'] ?></p>
             </div>
             <div class="header-actions">
                 <a href="upload.php" class="header__button"><i class="fa fa-upload"></i>Subir Foto</a>
