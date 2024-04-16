@@ -1,7 +1,7 @@
 <?php require_once $componentsFolder . "/TopbarComponent.php"; ?>
 
 <div class="wrapper">
-    <h3>Mi Perfil</h3>
+    <h1 class="text-center">Mi Perfil</h1>
     <form method="POST" class="formulario" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>"
         autocomplete="off">
         <input type="text" id="id" name="id" class="form-field" value="<?php echo $clientSession['id'] ?>" hidden>
