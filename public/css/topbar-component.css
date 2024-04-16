@@ -1,0 +1,20 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.header-actions {
+	display: flex;
+	column-gap: 24px;
+}
+
+.header__button {
+	display: flex;
+    align-items: center;
+	column-gap: 8px;
+}
+
+.header__message {
+	text-align: start;
+}

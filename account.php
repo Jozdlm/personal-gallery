@@ -24,7 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 Router::renderPage([
     "page" => "AccountPage",
     "layout" => "AppLayout",
-    "customStyle" => "home",
     "data" => [
         "clientSession" => getClientSession()
     ]
