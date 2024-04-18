@@ -32,15 +32,16 @@ function findPhotoById(int $id): array
     return $stm->fetch(PDO::FETCH_ASSOC);
 }
 
-function insertNewPhoto(string $title, string $description, string $imgUrl, int $userId): void
+function insertNewPhoto(string $title, string $description, string $imgUrl, string $date, int $userId): void
 {
     $conn = getDbConnection();
-    $stm = $conn->prepare('INSERT INTO photos (title, description, img_url, user_id) VALUES (:title, :description, :img_url, :user_id)');
+    $stm = $conn->prepare('INSERT INTO photos (title, description, img_url, user_id, upload_date) VALUES (:title, :description, :img_url, :user_id, :upload_date)');
     $stm->execute([
         ':title' => $title,
         ':description' => $description,
         ':img_url' => $imgUrl,
-        ':user_id' => $userId
+        ':user_id' => $userId,
+        ':upload_date' => $date
     ]);
 }
 

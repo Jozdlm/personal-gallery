@@ -7,7 +7,9 @@
 <div class="wrapper">
     <form class="formulario" method="POST" enctype="multipart/form-data"
         action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
+        <!-- Hidden inputs -->
         <input type="text" id="user-id" name="user_id" value="<?php echo $_SESSION['user']['id'] ?>" hidden>
+        <input type="date" id="upload-date" name="upload_date" value="<?php echo date("Y-m-d"); ?>" hidden>
 
         <label class="form-label" for="foto">Selecciona tu foto</label>
         <input type="file" id="image" name="photo" class="form-field">
