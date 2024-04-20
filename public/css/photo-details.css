@@ -4,8 +4,10 @@
     display: block;
     width: 100%;
     margin: auto;
-    max-width: 500px;
-    text-align: center;
+
+    display: grid;
+    grid-template-columns: max-content 1fr minmax(250px, 360px);
+    column-gap: 40px;
 }
 
 .photo__img {
@@ -27,7 +29,6 @@
 
 .photo__footer {
     display: flex;
-    justify-content: center;
     align-items: center;
-    column-gap: 20px;
+    column-gap: 32px;
 }
