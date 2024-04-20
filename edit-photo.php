@@ -23,5 +23,9 @@ Router::renderPage([
     "page" => "UpdatePhotoPage",
     "layout" => "AppLayout",
     "customeStyle" => "edit-photo",
-    "scopedScript" => "preview-image"
+    "scopedScript" => "preview-image",
+    "data" => [
+        "photo" => $photo,
+        "id" => $id
+    ]
 ]);
