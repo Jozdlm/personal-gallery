@@ -58,4 +58,4 @@ To run this project locally, follow these steps:
 ## Design
 You can view the design and components file here:
 
-[<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FAFPp2JcMEM5vozHhPscQMB%2Fpersonal-gallery%3Fnode-id%3D0-1%26t%3DhdUfpexzJxTPTC7T-1" allowfullscreen></iframe>](https://www.figma.com/design/AFPp2JcMEM5vozHhPscQMB/personal-gallery?node-id=0-1&t=hdUfpexzJxTPTC7T-1)
+[Personal Gallery Figma Design](https://www.figma.com/design/AFPp2JcMEM5vozHhPscQMB/personal-gallery?node-id=0-1&t=hdUfpexzJxTPTC7T-1)
