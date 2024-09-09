@@ -6,7 +6,6 @@ A simple image gallery web application created using PHP, HTML, CSS, JavaScript,
 
 This project was developed to enhance my PHP skills and serve as a learning exercise. I started inspired by the project from the Falcon Master PHP course, but I decided to add a lot of more features.
 
-
 ## Features
 
 - **User Registration and Login**: Users can create accounts, log in, and manage their profiles.
@@ -44,33 +43,19 @@ To run this project locally, follow these steps:
 
         CONSTRAINT users_pk2 UNIQUE (email)
     );
-    ```
+   ```
+
 1. **Install Dependencies**: Before running the project, you need to install its dependencies. Use the following command to install them:
 
-    ```bash
-    composer install
-    ```
+   ```bash
+   composer install
+   ```
+
 1. **Environment Variables**: Rename the .env.template file to .env and update the variable values as needed.
 
 1. **Access the Project**: Open the project in your web browser.
 
+## Design
+You can view the design and components file here:
 
-## Screenshoots
-
-Home Page
-![Home Page](public/images/home-page.png)
-
-Details Page
-![Details Page](public/images/details-page.png)
-
-Upload Page
-![Upload Page](public/images/upload-page.png)
-
-Update Page
-![Update Page](public/images/update-page.png)
-
-Login Page
-![Login Page](public/images/login-page.png)
-
-Register Page
-![Register Page](public/images/register-page.png)
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FAFPp2JcMEM5vozHhPscQMB%2Fpersonal-gallery%3Fnode-id%3D0-1%26t%3DhdUfpexzJxTPTC7T-1" allowfullscreen></iframe>
