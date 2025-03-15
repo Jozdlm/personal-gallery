@@ -1,5 +1,6 @@
 <?php
 require_once "src/DbConnection.php";
+require_once "src/Photo.php";
 
 function findPhotos(int $start, int $end): array
 {
@@ -12,13 +13,8 @@ function findPhotos(int $start, int $end): array
 
 function findPhotosByUser(int $start, int $end, int $userId): array
 {
-    $conn = getDbConnection();
-    $stm = $conn->prepare("SELECT * FROM photos WHERE user_id = :id LIMIT $start, $end");
-    $stm->execute([
-        ":id" => $userId,
-    ]);
-
-    return $stm->fetchAll(PDO::FETCH_ASSOC);
+    $photos = Photo::where('user_id', $userId)->skip($start)->take($end)->get();
+    return $photos->toArray();
 }
 
 function findPhotoById(int $id): array
