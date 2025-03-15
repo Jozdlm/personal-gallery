@@ -27,6 +27,17 @@ function startSession(): void
     }
 }
 
+/**
+ * Create a directory if it doesn't exist.
+ */
+function createDirectoryIfNeeded(string $path): void
+{
+    if (!is_dir($path)) {
+        mkdir($path, 0777, true);
+    }
+}
+
+
 final class Router
 {
     public static function renderPage(array $options): void

@@ -1,11 +1,5 @@
 <?php
-
-function createDirectoryIfNeeded(string $path): void
-{
-    if (!is_dir($path)) {
-        mkdir($path, 0777, true);
-    }
-}
+require_once 'src/utils.php';
 
 function validateFileExtension(string $extension, array $allowedExtensions): void
 {
