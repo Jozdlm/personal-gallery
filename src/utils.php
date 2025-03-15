@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Returns the value of a query parameter or null if it doesn't exist.
+ */
 function getHttpParam(string $param): string|null
 {
     return $_GET[$param] ?? null;
