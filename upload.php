@@ -11,8 +11,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
 
     if ($isAnImage && isset($_POST['title']) && isset($_POST['description'])) {
         $imgUrl = uploadPhoto();
-        insertNewPhoto($_POST['title'], $_POST['description'], $imgUrl, $_POST['upload_date'], (int) $_POST['user_id']);
-
+        insertNewPhoto([
+            'title' => $_POST['title'],
+            'description' => $_POST['description'],
+            'img_url' => $imgUrl,
+            'user_id' => (int) $_POST['user_id'],
+            'upload_date' => $_POST['upload_date']
+        ]);
         header('Location:index.php');
     }
 }

@@ -13,14 +13,14 @@ function findPhotoById(int $id): array
     $photo = Photo::find($id);
     return $photo?->toArray() ?? [];
 }
-function insertNewPhoto(string $title, string $description, string $imgUrl, string $date, int $userId): void
+function insertNewPhoto(array $data): void
 {
     Photo::create([
-        'title'       => $title,
-        'description' => $description,
-        'img_url'     => $imgUrl,
-        'user_id'     => $userId,
-        'upload_date' => $date
+        'title' => $data['title'],
+        'description' => $data['description'],
+        'img_url' => $data['img_url'],
+        'user_id' => $data['user_id'],
+        'upload_date' => $data['upload_date']
     ]);
 }
 
