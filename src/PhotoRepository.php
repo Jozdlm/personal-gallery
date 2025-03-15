@@ -1,5 +1,5 @@
 <?php
-require_once "src/DbConnection.php";
+require_once "src/config.php";
 require_once "src/Photo.php";
 
 function findPhotosByUser(int $start, int $end, int $userId): array
