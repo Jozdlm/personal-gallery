@@ -2,15 +2,6 @@
 require_once "src/DbConnection.php";
 require_once "src/Photo.php";
 
-function findPhotos(int $start, int $end): array
-{
-    $conn = getDbConnection();
-    $stm = $conn->prepare("SELECT * FROM photos LIMIT $start, $end");
-    $stm->execute();
-
-    return $stm->fetchAll(PDO::FETCH_ASSOC);
-}
-
 function findPhotosByUser(int $start, int $end, int $userId): array
 {
     $photos = Photo::where('user_id', $userId)->skip($start)->take($end)->get();
