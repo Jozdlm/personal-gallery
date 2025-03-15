@@ -5,13 +5,10 @@
  */
 function isLoggedGuard(): void
 {
-    if (session_status() === PHP_SESSION_NONE) {
-        session_start();
-    }
+    startSession();
 
     if (!isset($_SESSION['user']['id'])) {
-        header("Location: login.php");
-        exit;
+        redirectTo('login.php');
     }
 }
 
@@ -20,12 +17,9 @@ function isLoggedGuard(): void
  */
 function isAnonGuard(): void
 {
-    if (session_status() === PHP_SESSION_NONE) {
-        session_start();
-    }
+    startSession();
 
     if (isset($_SESSION['user']['id'])) {
-        header("Location: home.php");
-        exit;
+        redirectTo('home.php');
     }
 }

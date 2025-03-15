@@ -5,6 +5,25 @@ function getHttpParam(string $param): string|null
     return $_GET[$param] ?? null;
 }
 
+/**
+ * Redirects to the specified URL and stops further execution.
+ */
+function redirectTo(string $url): void
+{
+    header("Location: $url");
+    exit;
+}
+
+/**
+ * Starts the session if it hasn't already been started.
+ */
+function startSession(): void
+{
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+}
+
 final class Router
 {
     public static function renderPage(array $options): void
