@@ -1,8 +1,7 @@
 <?php
-require_once "src/Helpers/Router.php";
+require_once "src/utils.php";
 require_once "src/AuthGuard.php";
 require_once "src/PhotoRepository.php";
-require_once "src/utils.php";
 
 isLoggedGuard();
 

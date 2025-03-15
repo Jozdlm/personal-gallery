@@ -1,5 +1,5 @@
 <?php
-require_once "src/Helpers/Router.php";
+require_once "src/utils.php";
 require_once "src/AuthService.php";
 require_once "src/UserRepository.php";
 require_once "src/AuthGuard.php";
