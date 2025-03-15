@@ -1,5 +1,6 @@
 <?php
 require_once "src/DbConnection.php";
+require_once "src/user.php";
 
 function createUser(array $user): bool
 {
@@ -23,13 +24,14 @@ function createUser(array $user): bool
 function updateUser(int $id, array $newValues): void
 {
     if (count($newValues) > 0) {
-        $conn = getDbConnection();
-        $stm = $conn->prepare('UPDATE users SET username = :username, email = :email WHERE id = :id');
-        $stm->execute([
-            ':id' => $id,
-            ':username' => $newValues['username'],
-            ':email' => $newValues['email'],
-        ]);
+        $user = User::find($id);
+
+        if ($user) {
+            $user->update([
+                'username' => $newValues['username'],
+                'email' => $newValues['email'],
+            ]);
+        }
     }
 }
 
