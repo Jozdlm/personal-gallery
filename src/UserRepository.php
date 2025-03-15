@@ -35,9 +35,6 @@ function updateUser(int $id, array $newValues): void
 
 function getUserByEmail(string $email)
 {
-    $conn = getDbConnection();
-    $stmt = $conn->prepare("SELECT * FROM users WHERE email = :email");
-    $stmt->execute([":email" => $email]);
-
-    return $stmt->fetch(PDO::FETCH_ASSOC);
+    $user = User::where('email', $email)->first();
+    return $user?->toArray() ?? null;
 }
