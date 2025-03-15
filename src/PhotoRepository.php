@@ -41,9 +41,10 @@ function updatePhoto(int $id, array $values): void
     }
 }
 
-function deletePhoto(int $id): void
+function deletePhoto(int $id, array $photo): void
 {
     if ($id > 0) {
+        unlink($_SERVER['DOCUMENT_ROOT'] . '/' . $photo['img_url']);
         Photo::destroy($id);
     }
 }

@@ -11,7 +11,6 @@ if (!$id) {
 echo "Eliminando Fotografía... Espere unos segundos";
 
 $photo = findPhotoById($id);
-unlink($_SERVER['DOCUMENT_ROOT'] . '/' . $photo['img_url']);
-deletePhoto($id);
+deletePhoto($id, $photo);
 
 header("Location:index.php");
