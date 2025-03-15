@@ -1,9 +1,9 @@
 <?php
 require_once "src/utils.php";
-require_once "src/AuthGuard.php";
+require_once "src/middlewares.php";
 require_once "src/PhotoRepository.php";
 
-isLoggedGuard();
+privatePageMiddleware();
 
 $photos = [];
 $photosPerPage = 8;

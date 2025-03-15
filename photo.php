@@ -1,10 +1,10 @@
 <?php
 require_once "src/utils.php";
-require_once "src/AuthGuard.php";
+require_once "src/middlewares.php";
 require_once "src/PhotoRepository.php";
 require_once "src/UploadService.php";
 
-isLoggedGuard();
+privatePageMiddleware();
 
 $id = getHttpParam("id");
 $photo = [];

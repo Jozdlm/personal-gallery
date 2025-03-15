@@ -1,10 +1,10 @@
 <?php
 require_once "src/utils.php";
+require_once "src/middlewares.php";
 require_once "src/AuthService.php";
 require_once "src/UserRepository.php";
-require_once "src/AuthGuard.php";
 
-isLoggedGuard();
+privatePageMiddleware();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_POST['id'] > 0) {

@@ -4,7 +4,7 @@ require_once 'src/utils.php';
 /**
  * Allow access only to logged users, otherwise redirects to login page.
  */
-function sessionMiddleware(): void
+function privatePageMiddleware(): void
 {
     startSession();
 

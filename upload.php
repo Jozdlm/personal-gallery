@@ -1,10 +1,10 @@
 <?php
 require_once "src/utils.php";
-require_once "src/AuthGuard.php";
+require_once "src/middlewares.php";
 require_once "src/PhotoRepository.php";
 require_once "src/UploadService.php";
 
-isLoggedGuard();
+privatePageMiddleware();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)) {
     $isAnImage = getimagesize($_FILES['photo']['tmp_name']);
