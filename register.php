@@ -1,10 +1,10 @@
 <?php
 require_once "src/utils.php";
-require_once "src/AuthGuard.php";
+require_once "src/middlewares.php";
 require_once "src/UserRepository.php";
 require_once "src/AuthService.php";
 
-isAnonGuard();
+publicPageMiddleware();
 
 $message = "";
 
