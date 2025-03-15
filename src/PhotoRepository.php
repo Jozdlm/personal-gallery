@@ -15,13 +15,15 @@ function findPhotoById(int $id): array
 }
 function insertNewPhoto(array $data): void
 {
-    Photo::create([
-        'title' => $data['title'],
-        'description' => $data['description'],
-        'img_url' => $data['img_url'],
-        'user_id' => $data['user_id'],
-        'upload_date' => $data['upload_date']
-    ]);
+    if (isset($data)) {
+        Photo::create([
+            'title' => $data['title'],
+            'description' => $data['description'],
+            'img_url' => $data['img_url'],
+            'user_id' => $data['user_id'],
+            'upload_date' => $data['upload_date']
+        ]);
+    }
 }
 
 function updatePhoto(int $id, array $values): void
@@ -41,10 +43,6 @@ function updatePhoto(int $id, array $values): void
 function deletePhoto(int $id): void
 {
     if ($id > 0) {
-        $conn = getDbConnection();
-        $stm = $conn->prepare('DELETE FROM photos WHERE id = :id');
-        $stm->execute([
-            ':id' => $id,
-        ]);
+        Photo::destroy($id);
     }
 }
