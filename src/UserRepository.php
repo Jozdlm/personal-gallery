@@ -1,24 +1,24 @@
 <?php
-require_once "src/DbConnection.php";
+require_once "src/config.php";
 require_once "src/user.php";
 
 function createUser(array $user): bool
 {
-    if (!$user["username"])
+    // Validate the required fields
+    if (empty($user['username']) || empty($user['email']) || empty($user['password'])) {
         return false;
-    if (!$user["email"])
-        return false;
-    if (!$user["password"])
-        return false;
+    }
 
-    $conn = getDbConnection();
-    $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES(:username, :email, :password)");
+    // Hash the password before saving
+    $user['password'] = Hash::make($user['password']);
 
-    return $stmt->execute([
-        ":username" => $user["username"],
-        ":email" => $user["email"],
-        ":password" => $user["password"],
+    $result = User::create([
+        'username' => $user['username'],
+        'email' => $user['email'],
+        'password' => $user['password'],
     ]);
+
+    return $result ? true : false;
 }
 
 function updateUser(int $id, array $newValues): void

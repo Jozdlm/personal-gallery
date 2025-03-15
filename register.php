@@ -11,7 +11,7 @@ $message = "";
 if (isset($_POST['username']) && isset($_POST["email"]) && isset($_POST['password'])) {
     $username = trim($_POST['username']);
     $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
-    $password = password_hash(trim($_POST['password']), PASSWORD_BCRYPT, ['cost' => 10]);
+    $password = trim($_POST['password']);
 
     $user = [
         'username' => $username,
