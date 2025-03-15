@@ -19,13 +19,8 @@ function findPhotosByUser(int $start, int $end, int $userId): array
 
 function findPhotoById(int $id): array
 {
-    $conn = getDbConnection();
-    $stm = $conn->prepare("SELECT * FROM photos WHERE id = :id");
-    $stm->execute([
-        ':id' => $id
-    ]);
-
-    return $stm->fetch(PDO::FETCH_ASSOC);
+    $photo = Photo::find($id);
+    return $photo?->toArray() ?? [];
 }
 
 function insertNewPhoto(string $title, string $description, string $imgUrl, string $date, int $userId): void
