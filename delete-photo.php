@@ -1,8 +1,8 @@
 <?php
-require_once "src/Helpers/HttpParams.php";
 require_once "src/PhotoRepository.php";
+require_once "src/utils.php";
 
-$id = HttpParams::get('id');
+$id = getHttpParam('id');
 
 if (!$id) {
     header("Location:index.php");

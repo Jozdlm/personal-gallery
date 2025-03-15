@@ -1,8 +1,8 @@
 <?php
-require_once "src/Helpers/HttpParams.php";
 require_once "src/Helpers/Router.php";
 require_once "src/AuthGuard.php";
 require_once "src/PhotoRepository.php";
+require_once "src/utils.php";
 
 isLoggedGuard();
 
@@ -11,7 +11,7 @@ $photosPerPage = 8;
 $photosCount = 0;
 $pagesCount = 0;
 
-$currentPage = (int) HttpParams::get('p') ?? 1;
+$currentPage = (int) getHttpParam('p') ?? 1;
 $startItems = ($currentPage > 1) ? $currentPage * $photosPerPage - $photosPerPage : 0;
 
 $photos = findPhotosByUser($startItems, $photosPerPage, (int) $_SESSION['user']['id']);
