@@ -2,6 +2,8 @@
 
 A simple image gallery web application created using PHP, HTML, CSS, JavaScript, and MySQL.
 
+![Home Page Screenshot](/public/images/home-page.png)
+
 ## Motivation
 
 This project was developed to enhance my PHP skills and serve as a learning exercise.
