@@ -4,7 +4,7 @@ A simple image gallery web application created using PHP, HTML, CSS, JavaScript,
 
 ## Motivation
 
-This project was developed to enhance my PHP skills and serve as a learning exercise. I started inspired by the project from the Falcon Master PHP course, but I decided to add a lot of more features.
+This project was developed to enhance my PHP skills and serve as a learning exercise.
 
 ## Features
 
@@ -54,8 +54,3 @@ To run this project locally, follow these steps:
 1. **Environment Variables**: Rename the .env.template file to .env and update the variable values as needed.
 
 1. **Access the Project**: Open the project in your web browser.
-
-## Design
-You can view the design and components file here:
-
-[Personal Gallery Figma Design](https://www.figma.com/design/AFPp2JcMEM5vozHhPscQMB/personal-gallery?node-id=0-1&t=hdUfpexzJxTPTC7T-1)
